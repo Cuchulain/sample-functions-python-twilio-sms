@@ -110,7 +110,7 @@ def main(args):
             from_=number,
             to=user_to
         )
-        if msg.status != "undelivered" or msg.status != "failed":
+        if msg.status != "undelivered" and msg.status != "failed":
             return {
                 "statusCode": HTTPStatus.ACCEPTED,
                 "body": "success"
